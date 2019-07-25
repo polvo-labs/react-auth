@@ -1,34 +1,31 @@
 {
   "compilerOptions": {
-    "lib": [
-      "es2015",
-      "es2015.promise",
-      "es2016",
-      "es6",
-      "dom"
-    ],
     "outDir": "./dist/",
     "declaration": true,
     "declarationDir": "./dist/",
     "sourceMap": true,
-    "module": "commonjs",
     "target": "es5",
-    "jsx": "react",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": false,
     "skipLibCheck": true,
-    "noErrorTruncation": true,
-    "noImplicitAny": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "strictNullChecks": false,
     "forceConsistentCasingInFileNames": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "strictNullChecks": true,
-    "suppressImplicitAnyIndexErrors": true,
-    "types": [
-      "node"
-    ]
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "noEmit": true,
+    "jsx": "preserve",
+    "baseUrl": "src",
+    "noImplicitAny": false
   },
   "files": [
-    "src/index.tsx"
-  ],
-  "compileOnSave": false
+    "src/index.ts"
+  ]
 }

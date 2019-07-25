@@ -12,7 +12,7 @@ const config = {
   entry: [
     // do not load babel-polyfill here, the application should load the polyfills!
     // the entry application code
-    path.resolve(__dirname, 'src/index.tsx')
+    path.resolve(__dirname, 'src/index.ts')
   ],
   externals: Object.keys(package_.dependencies), // exclude all dependencies from the bundle
   optimization: {

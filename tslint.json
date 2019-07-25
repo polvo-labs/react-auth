@@ -60,7 +60,7 @@
       "check-whitespace"
     ],
     "semicolon": [
-      true,
+      false,
       "always"
     ],
     "triple-equals": [

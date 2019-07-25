@@ -27,7 +27,7 @@ export default class StartApp extends React.Component<any, any> {
 
 if (module.hot) {
   // todo: fix me
-  module.hot.accept('./../showcase/index.tsx', function () {
+  module.hot.accept('./../showcase/index.ts', function () {
     console.log('Accepting the updated module under dev');
     forceUpdate();
   });
