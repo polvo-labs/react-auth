@@ -85,6 +85,15 @@ class AuthProvider extends Component<AuthProviderProps, AuthProviderState> {
     })
   }
 
+  setUser = (user: any) => {
+    this.setState(state => ({
+      user: {
+        ...state.user,
+        ...user
+      }
+    }))
+  }
+
   render () {
     if (!this.state.mounted && this.state.authenticating) {
       return this.props.loader
@@ -98,7 +107,8 @@ class AuthProvider extends Component<AuthProviderProps, AuthProviderState> {
           handleUnauthorizedGuestAccess: this.props.handleUnauthorizedGuestAccess,
           login: this.login,
           logout: this.logout,
-          axios: this.axios
+          axios: this.axios,
+          setUser: this.setUser
         }}
       >
         {this.props.children}

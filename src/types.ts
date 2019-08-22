@@ -31,6 +31,7 @@ export interface AuthProviderValue extends AuthProviderState {
   axios: AxiosInstance,
   handleUnauthorizedPrivateAccess()
   handleUnauthorizedGuestAccess()
+  setUser(user: any)
 }
 
 export interface User {
