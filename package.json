@@ -1,6 +1,6 @@
 {
   "name": "@polvo-labs/react-auth",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "React components and hooks for laravel authentication",
   "private": false,
   "repository": {

@@ -2482,6 +2482,14 @@ function (_super) {
       });
     };
 
+    _this.setUser = function (user) {
+      _this.setState(function (state) {
+        return {
+          user: __assign({}, state.user, user)
+        };
+      });
+    };
+
     return _this;
   }
 
@@ -2584,7 +2592,8 @@ function (_super) {
         handleUnauthorizedGuestAccess: this.props.handleUnauthorizedGuestAccess,
         login: this.login,
         logout: this.logout,
-        axios: this.axios
+        axios: this.axios,
+        setUser: this.setUser
       })
     }, this.props.children);
   };
@@ -2614,12 +2623,12 @@ var _default = AuthProvider;
     return;
   }
 
-  reactHotLoader.register(__extends, "__extends", "/var/www/html/react-auth2/src/AuthProvider.tsx");
-  reactHotLoader.register(__assign, "__assign", "/var/www/html/react-auth2/src/AuthProvider.tsx");
-  reactHotLoader.register(__awaiter, "__awaiter", "/var/www/html/react-auth2/src/AuthProvider.tsx");
-  reactHotLoader.register(__generator, "__generator", "/var/www/html/react-auth2/src/AuthProvider.tsx");
-  reactHotLoader.register(AuthProvider, "AuthProvider", "/var/www/html/react-auth2/src/AuthProvider.tsx");
-  reactHotLoader.register(_default, "default", "/var/www/html/react-auth2/src/AuthProvider.tsx");
+  reactHotLoader.register(__extends, "__extends", "/home/gusch/Projects/react-auth/src/AuthProvider.tsx");
+  reactHotLoader.register(__assign, "__assign", "/home/gusch/Projects/react-auth/src/AuthProvider.tsx");
+  reactHotLoader.register(__awaiter, "__awaiter", "/home/gusch/Projects/react-auth/src/AuthProvider.tsx");
+  reactHotLoader.register(__generator, "__generator", "/home/gusch/Projects/react-auth/src/AuthProvider.tsx");
+  reactHotLoader.register(AuthProvider, "AuthProvider", "/home/gusch/Projects/react-auth/src/AuthProvider.tsx");
+  reactHotLoader.register(_default, "default", "/home/gusch/Projects/react-auth/src/AuthProvider.tsx");
   leaveModule(module);
 })();
 
@@ -2664,10 +2673,10 @@ var _default = Context;
     return;
   }
 
-  reactHotLoader.register(Context, "Context", "/var/www/html/react-auth2/src/Context.ts");
-  reactHotLoader.register(Provider, "Provider", "/var/www/html/react-auth2/src/Context.ts");
-  reactHotLoader.register(Consumer, "Consumer", "/var/www/html/react-auth2/src/Context.ts");
-  reactHotLoader.register(_default, "default", "/var/www/html/react-auth2/src/Context.ts");
+  reactHotLoader.register(Context, "Context", "/home/gusch/Projects/react-auth/src/Context.ts");
+  reactHotLoader.register(Provider, "Provider", "/home/gusch/Projects/react-auth/src/Context.ts");
+  reactHotLoader.register(Consumer, "Consumer", "/home/gusch/Projects/react-auth/src/Context.ts");
+  reactHotLoader.register(_default, "default", "/home/gusch/Projects/react-auth/src/Context.ts");
   leaveModule(module);
 })();
 
@@ -2770,9 +2779,9 @@ function Fetch(props) {
     return;
   }
 
-  reactHotLoader.register(__assign, "__assign", "/var/www/html/react-auth2/src/Fetch.tsx");
-  reactHotLoader.register(__rest, "__rest", "/var/www/html/react-auth2/src/Fetch.tsx");
-  reactHotLoader.register(Fetch, "Fetch", "/var/www/html/react-auth2/src/Fetch.tsx");
+  reactHotLoader.register(__assign, "__assign", "/home/gusch/Projects/react-auth/src/Fetch.tsx");
+  reactHotLoader.register(__rest, "__rest", "/home/gusch/Projects/react-auth/src/Fetch.tsx");
+  reactHotLoader.register(Fetch, "Fetch", "/home/gusch/Projects/react-auth/src/Fetch.tsx");
   leaveModule(module);
 })();
 
@@ -2833,7 +2842,7 @@ function GuestArea(_a) {
     return;
   }
 
-  reactHotLoader.register(GuestArea, "GuestArea", "/var/www/html/react-auth2/src/GuestArea.tsx");
+  reactHotLoader.register(GuestArea, "GuestArea", "/home/gusch/Projects/react-auth/src/GuestArea.tsx");
   leaveModule(module);
 })();
 
@@ -2889,7 +2898,7 @@ function Logout(_a) {
     return;
   }
 
-  reactHotLoader.register(Logout, "Logout", "/var/www/html/react-auth2/src/Logout.tsx");
+  reactHotLoader.register(Logout, "Logout", "/home/gusch/Projects/react-auth/src/Logout.tsx");
   leaveModule(module);
 })();
 
@@ -2950,7 +2959,7 @@ function PrivateArea(_a) {
     return;
   }
 
-  reactHotLoader.register(PrivateArea, "PrivateArea", "/var/www/html/react-auth2/src/PrivateArea.tsx");
+  reactHotLoader.register(PrivateArea, "PrivateArea", "/home/gusch/Projects/react-auth/src/PrivateArea.tsx");
   leaveModule(module);
 })();
 
@@ -3190,10 +3199,10 @@ var _default = Service;
     return;
   }
 
-  reactHotLoader.register(__awaiter, "__awaiter", "/var/www/html/react-auth2/src/Service.ts");
-  reactHotLoader.register(__generator, "__generator", "/var/www/html/react-auth2/src/Service.ts");
-  reactHotLoader.register(Service, "Service", "/var/www/html/react-auth2/src/Service.ts");
-  reactHotLoader.register(_default, "default", "/var/www/html/react-auth2/src/Service.ts");
+  reactHotLoader.register(__awaiter, "__awaiter", "/home/gusch/Projects/react-auth/src/Service.ts");
+  reactHotLoader.register(__generator, "__generator", "/home/gusch/Projects/react-auth/src/Service.ts");
+  reactHotLoader.register(Service, "Service", "/home/gusch/Projects/react-auth/src/Service.ts");
+  reactHotLoader.register(_default, "default", "/home/gusch/Projects/react-auth/src/Service.ts");
   leaveModule(module);
 })();
 
@@ -3277,10 +3286,10 @@ function isObject(val) {
     return;
   }
 
-  reactHotLoader.register(expand, "expand", "/var/www/html/react-auth2/src/expand.ts");
-  reactHotLoader.register(set, "set", "/var/www/html/react-auth2/src/expand.ts");
-  reactHotLoader.register(split, "split", "/var/www/html/react-auth2/src/expand.ts");
-  reactHotLoader.register(isObject, "isObject", "/var/www/html/react-auth2/src/expand.ts");
+  reactHotLoader.register(expand, "expand", "/home/gusch/Projects/react-auth/src/expand.ts");
+  reactHotLoader.register(set, "set", "/home/gusch/Projects/react-auth/src/expand.ts");
+  reactHotLoader.register(split, "split", "/home/gusch/Projects/react-auth/src/expand.ts");
+  reactHotLoader.register(isObject, "isObject", "/home/gusch/Projects/react-auth/src/expand.ts");
   leaveModule(module);
 })();
 
@@ -3506,9 +3515,9 @@ function handleFormSubmit(options) {
     return;
   }
 
-  reactHotLoader.register(__awaiter, "__awaiter", "/var/www/html/react-auth2/src/handleFormSubmit.ts");
-  reactHotLoader.register(__generator, "__generator", "/var/www/html/react-auth2/src/handleFormSubmit.ts");
-  reactHotLoader.register(handleFormSubmit, "handleFormSubmit", "/var/www/html/react-auth2/src/handleFormSubmit.ts");
+  reactHotLoader.register(__awaiter, "__awaiter", "/home/gusch/Projects/react-auth/src/handleFormSubmit.ts");
+  reactHotLoader.register(__generator, "__generator", "/home/gusch/Projects/react-auth/src/handleFormSubmit.ts");
+  reactHotLoader.register(handleFormSubmit, "handleFormSubmit", "/home/gusch/Projects/react-auth/src/handleFormSubmit.ts");
   leaveModule(module);
 })();
 
@@ -3601,7 +3610,7 @@ function useAuth() {
     return;
   }
 
-  reactHotLoader.register(useAuth, "useAuth", "/var/www/html/react-auth2/src/useAuth.ts");
+  reactHotLoader.register(useAuth, "useAuth", "/home/gusch/Projects/react-auth/src/useAuth.ts");
   leaveModule(module);
 })();
 
@@ -3748,7 +3757,7 @@ function useRequest(_a) {
     return;
   }
 
-  reactHotLoader.register(useRequest, "useRequest", "/var/www/html/react-auth2/src/useRequest.ts");
+  reactHotLoader.register(useRequest, "useRequest", "/home/gusch/Projects/react-auth/src/useRequest.ts");
   leaveModule(module);
 })();
 
@@ -3765,7 +3774,7 @@ function useRequest(_a) {
 /*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /var/www/html/react-auth2/src/index.ts */"./src/index.ts");
+module.exports = __webpack_require__(/*! /home/gusch/Projects/react-auth/src/index.ts */"./src/index.ts");
 
 
 /***/ }),

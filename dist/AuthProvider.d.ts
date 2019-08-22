@@ -11,6 +11,7 @@ declare class AuthProvider extends Component<AuthProviderProps, AuthProviderStat
     login: (email: string, password: string) => Promise<void>;
     private autoLogin;
     logout: () => Promise<void>;
+    setUser: (user: any) => void;
     render(): JSX.Element;
     static defaultProps: {
         loader: any;
