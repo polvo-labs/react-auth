@@ -1,9 +1,11 @@
-import React, { useEffect } from 'react'
-import { Text } from 'react-native'
+import { useEffect } from 'react'
 import useAuth from './useAuth'
 
 export default function GuestArea ({ children }: { children: any }) {
-  const { authenticated, handleUnauthorizedGuestAccess } = useAuth()
+  const {
+    authenticated,
+    handleUnauthorizedGuestAccess = () => null
+  } = useAuth()
 
   useEffect(() => {
     if (authenticated) {
@@ -16,5 +18,5 @@ export default function GuestArea ({ children }: { children: any }) {
     return children
   }
 
-  return <Text>guest access</Text>
+  return null
 }

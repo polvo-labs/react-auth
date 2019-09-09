@@ -19,7 +19,7 @@ export default async function handleFormSubmit (options: handleFormSubmitOptions
 
 interface handleFormSubmitOptions {
   request: Promise<any>
-  onValidationErrors(validationErrors: any)
-  onSuccess(data: any)
-  onFailure(err: any)
+  onValidationErrors(validationErrors: any): any
+  onSuccess(data: any): any
+  onFailure(err: any): any
 }

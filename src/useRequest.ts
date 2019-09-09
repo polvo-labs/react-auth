@@ -1,10 +1,11 @@
 import { useEffect, useState, useMemo } from 'react'
-import axiosDefault from 'axios'
-import Emitter from 'tiny-emitter'
+import axiosDefault, { AxiosError, AxiosRequestConfig, AxiosResponse } from 'axios'
+import * as Emitter from 'tiny-emitter'
 import { RequestData, UseRequestArgs } from './types'
 import useAuth from './useAuth'
 
 export default function useRequest ({ authorized = true, onError, onSuccess }: UseRequestArgs = {}): RequestData {
+  // @ts-ignore
   const emitter = useMemo(() => new Emitter(), [])
   const { token, axios } = useAuth()
   const [ requestConfig, setRequestConfig ] = useState<any>(null)
@@ -31,6 +32,7 @@ export default function useRequest ({ authorized = true, onError, onSuccess }: U
 
     requestConfig.cancelToken = source.token
 
+    // @ts-ignore
     axios(requestConfig)
       .then(response => {
         setLoading(false)
@@ -66,11 +68,11 @@ export default function useRequest ({ authorized = true, onError, onSuccess }: U
     }
   }, [ requestConfig ])
 
-  const request = config => {
+  const request = (config: Partial<AxiosRequestConfig>) => {
     setRequestConfig(config)
     return new Promise((resolve, reject) => {
-      emitter.on('success', response => resolve(response))
-      emitter.on('failure', err => reject(err))
+      emitter.on('success', (response: AxiosResponse) => resolve(response))
+      emitter.on('failure', (err: AxiosError) => reject(err))
     })
   }
 

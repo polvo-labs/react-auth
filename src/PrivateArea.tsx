@@ -1,8 +1,11 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import useAuth from './useAuth'
 
 export default function PrivateArea ({ children }: { children: any }) {
-  const { authenticated, handleUnauthorizedPrivateAccess } = useAuth()
+  const {
+    authenticated,
+    handleUnauthorizedPrivateAccess = () => null
+  } = useAuth()
 
   useEffect(() => {
     if (!authenticated) {
