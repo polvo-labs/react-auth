@@ -23,10 +23,11 @@ export interface AuthProviderState {
   authenticated: boolean
   user: any
   token: string
+  meta: any
 }
 
 export interface AuthProviderValue extends AuthProviderState {
-  login(email: string, password: string): Promise<LoginResponse>
+  login(email: string, password: string, meta: any): Promise<LoginResponse>
   logout()
   axios: AxiosInstance,
   handleUnauthorizedPrivateAccess()

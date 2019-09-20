@@ -1,6 +1,6 @@
 {
   "name": "@polvo-labs/react-auth",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "React components and hooks for laravel authentication",
   "private": false,
   "main": "dist/index.js",
@@ -17,11 +17,6 @@
   },
   "peerDependencies": {
     "react": ">=16"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "tsdx lint"
-    }
   },
   "prettier": {
     "printWidth": 80,

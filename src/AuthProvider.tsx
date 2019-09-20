@@ -10,7 +10,8 @@ class AuthProvider extends Component<AuthProviderProps, AuthProviderState> {
     authenticated: false,
     authenticating: true,
     user: null,
-    token: ''
+    token: '',
+    meta: {}
   }
 
   state = this.initialState
@@ -33,7 +34,7 @@ class AuthProvider extends Component<AuthProviderProps, AuthProviderState> {
     this.setState({ mounted: true, authenticated: false })
   }
 
-  login = async (email: string, password: string): Promise<LoginResponse> => {
+  login = async (email: string, password: string, meta: any): Promise<LoginResponse> => {
     this.setState({ authenticating: true })
 
     try {
@@ -51,7 +52,8 @@ class AuthProvider extends Component<AuthProviderProps, AuthProviderState> {
         user,
         token,
         authenticated: true,
-        authenticating: false
+        authenticating: false,
+        meta
       })
 
       return { user, token }
