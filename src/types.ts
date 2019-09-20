@@ -27,12 +27,13 @@ export interface AuthProviderState {
 }
 
 export interface AuthProviderValue extends AuthProviderState {
-  login(email: string, password: string, meta: any): Promise<LoginResponse>
+  login(email: string, password: string, metaw: any): Promise<LoginResponse>
   logout()
   axios: AxiosInstance,
   handleUnauthorizedPrivateAccess()
   handleUnauthorizedGuestAccess()
   setUser(user: any)
+  setMeta(meta: any)
 }
 
 export interface User {

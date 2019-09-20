@@ -103,6 +103,10 @@ class AuthProvider extends Component<AuthProviderProps, AuthProviderState> {
     }))
   }
 
+  setMeta = (meta: any) => {
+    this.setState({ meta })
+  }
+
   render () {
     if (!this.state.mounted && this.state.authenticating) {
       return this.props.loader
@@ -117,7 +121,8 @@ class AuthProvider extends Component<AuthProviderProps, AuthProviderState> {
           login: this.login,
           logout: this.logout,
           axios: this.axios,
-          setUser: this.setUser
+          setUser: this.setUser,
+          setMeta: this.setMeta
         }}
       >
         {this.props.children}
